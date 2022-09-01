@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-ceter">
+                    <h1>Signup</h1>
+                    <h5>Happy to be a member</h5><hr>
+                    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Name</label>
+                          <input type="email" class="form-control" id="Name" aria-describedby="emailHelp" formControlName="Name" placeholder="Enter Name">
+                          <div class="form-text text-danger" *ngIf=" Name.errors?.['required']&& (Name.touched || Name.dirty)">
+                            Name required
+                          </div>
+                          <div class="form-text text-danger" *ngIf="Name.errors?.['minlength'] && (Name.touched || Name.dirty)">
+                            Name is too short
+                          </div>
+                          <div class="form-text text-danger" *ngIf="Name.errors?.['pattern'] && (Name.touched || Name.dirty)">
+                            Name should start with alphabet
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+                            <input type="email" class="form-control" id="Mobile" aria-describedby="emailHelp" formControlName="Mobile"placeholder="Enter Mobile Number">
+                            <div class="form-text text-danger" *ngIf="Mobile.errors?.['required']&& (Mobile.touched || Mobile.dirty)">
+                                Mobile number required
+                              </div>
+                              <div class="form-text text-danger" *ngIf="Mobile.errors?.['pattern']&& (Mobile.touched || Mobile.dirty)">
+                                Mobile number invalid
+                              </div>
+                              <div class="form-text text-danger" *ngIf="Mobile.errors?.['minLength']&& (Mobile.touched || Mobile.dirty)">
+                                Mobile number too short
+                              </div>
+                              <div class="form-text text-danger" *ngIf="Mobile.errors?.['maxLength']&& (Mobile.touched || Mobile.dirty)">
+                                Mobile number too long
+                              </div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp"formControlName="Email"placeholder="Enter Valid Email">
+                            <div class="form-text text-danger" *ngIf="Email.errors?.['required']&& (Email.touched || Email.dirty)">
+                                Email required
+                              </div>
+                              <div class="form-text text-danger" *ngIf="Email.errors?.['email']&& (Email.touched || Email.dirty)">
+                                Email is invalid
+                              </div>
+                          </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="Password" formControlName="Password"placeholder="Enter">
+                          <div class="form-text text-danger" *ngIf="Password.errors?.['required']&& (Password.touched || Password.dirty)">
+                            Password required
+                          </div>
+                          <div class="form-text text-danger" *ngIf="Password.errors?.['minlength'] && (Password.touched || Password.dirty)">
+                            Password is too short
+                          </div>
+                        </div>
+                        <button type="submit" [disabled]="signupForm.invalid" class="btn btn-primary">Sign Up
+
+                        </button>
+                      </form>
+                      <a routerLink="/login1">Already member? Click to login</a>
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

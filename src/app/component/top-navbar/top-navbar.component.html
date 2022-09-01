@@ -1,0 +1,73 @@
+<mat-toolbar class=" navigation navigation-exapnd-lg">
+	<div class="header-lg">
+	 <a class="logo" href="#">
+	   <img src="https://i.pinimg.com/736x/de/a0/f3/dea0f3b7f480b1151c08db4a402a43b9.jpg" width="100" height="60" alt="">
+   </a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	 <span class="navbar-toggler-icon"></span>
+   </button>
+	</div>
+	   <div class ="searchbar">
+		 <form class="form-inline my-2 my-lg-0">
+		   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+		 </form>
+	   </div>
+	   <div class="searchicon">
+		 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+		   <i class="fa fa-search" aria-hidden="true"></i>
+	   </button>
+	   </div>
+	   
+ 
+	   <div class="dropdown">
+		 
+		   <mat-form-field floatLabel="auto">
+			   <mat-label>24/7 Help</mat-label>
+			   <mat-select>
+					<mat-option value="Contact us">Contact US</mat-option>
+					<mat-option value="Contact us">88888*****000</mat-option>
+			   </mat-select>
+			 </mat-form-field>
+			 &nbsp;
+			 &nbsp;
+			 &nbsp;
+			 &nbsp;
+			 &nbsp;
+			 <mat-form-field floatLabel="auto">
+			   <mat-label>Login & Register</mat-label>
+			   <mat-select>
+					<mat-option value="Login"routerLink="login" routerLinkActive="active-link"href="#">Login</mat-option>
+					<mat-option value="Register"routerLink="signup" routerLinkActive="active-link"href="#">Register</mat-option> 
+			   </mat-select>
+			 </mat-form-field>
+			 &nbsp;
+			 &nbsp;
+			 &nbsp;
+			 &nbsp;
+			 &nbsp;
+			 <mat-form-field floatLabel="auto">
+			   <mat-label>Shop By Room</mat-label>
+			   <mat-select>
+					<mat-option value="Contact us"routerLink="product" routerLinkActive="active-link">Living Room</mat-option>
+					<mat-option value="Contact us"routerLink="product" routerLinkActive="active-link">Bed Room</mat-option>
+					<mat-option value="Contact us"routerLink="product" routerLinkActive="active-link">Dining Room</mat-option>
+					<mat-option value="Contact us"routerLink="product" routerLinkActive="active-link">Study Room</mat-option>
+			   </mat-select>
+			 &nbsp;
+			 &nbsp;
+			 &nbsp;
+			 &nbsp;
+			 &nbsp;
+		   </mat-form-field>
+		   &nbsp;
+			 &nbsp;
+			 &nbsp;
+
+			   <button routerLink="/cart"class class = "add-to-cart">
+				   <i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;<span class='text'>5</span></i>
+			   </button>       
+	   </div>
+	   <button routerLink="/login" class=" btn btn-danger mx-3">Log out</button>
+
+	 
+</mat-toolbar>

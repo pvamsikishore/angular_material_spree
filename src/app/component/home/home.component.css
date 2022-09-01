@@ -1,0 +1,67 @@
+.dropdown{
+    margin-top: 10px;
+    margin-left: 5px;
+    background-color: transparent;
+    padding-top: 10px;
+    padding-left: 5px;
+    width: 100%;
+    margin-bottom: 0px;
+    outline: none;
+    font-weight: 300;
+    color: beige;
+    font-size: 15px;
+    
+}
+.navigation{
+    background-color:#035454;
+}
+.logo{
+    width: 100px;
+ margin-right: 10px;
+    height: 60px;
+}
+.add-to-cart{
+    background-color: #035454;
+    border:none;
+    color: beige;
+}
+.fa-shopping-cart{
+    font-size: 25px;
+}
+.text{
+    font-size: 15px;
+    color:red;
+}
+.sort_by_room{
+    padding: 20px 0;
+}
+img{
+    max-width: 100%;
+}
+.sort_by_room{
+    background-color:#70a3a3;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 0 15px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.btn{
+text-align: center;    
+align-items: center;
+margin-left: 75px;
+}
+.mainpage{
+    background-color:#70a3a3;
+}
+#carouselExampleControls{
+    padding: 15px;
+    padding-bottom: 40px;
+}
+.searchicon{
+    padding: 45px;
+
+}
+.btn-outline-success{
+    margin-left: -45px;
+}

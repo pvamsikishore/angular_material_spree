@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-ceter">
+                    <h1>Login</h1>
+                    <h5>Feel Free to Login</h5><hr>
+                    <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" formControlName="email" placeholder="Enter correct email">
+                          <div class="form-text text-danger" *ngIf="email.errors?.['required']&& (email.touched || email.dirty)">
+                            Email required
+                          </div>
+                          <div class="form-text text-danger" *ngIf="email.errors?.['email']&& (email.touched || email.dirty)">
+                            Email is invalid
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter correct password">
+                          <div class="form-text text-danger" *ngIf="password.errors?.['required']&& (password.touched || password.dirty)">
+                            Password required
+                          </div>
+                          <div class="form-text text-danger" *ngIf="password.errors?.['minlength'] && (password.touched || password.dirty)">
+                            Password is too short
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                      </form>
+                      <a  style="margin-top:10px;"routerLink="/signup1">New user? Click to signup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
